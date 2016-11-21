@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cinema.cs" />
+    <Compile Include="Context.cs" />
     <Compile Include="Listing.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

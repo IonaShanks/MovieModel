@@ -1,6 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using System.Data.Entity;
+using System.Collections.Generic;
 
 
 
@@ -21,26 +21,21 @@ namespace MovieModel
         [Display(Name = "18")]
         Eighteen
     };
-    public class Listing
+    public class MovieListing
     {
         //Film ID title certification genre description running time
         [Key]
-        public int FilmID { get; set; }
+        public String FilmID { get; set; }
         public String Title { get; set; }
         public Certification Certification { get; set; }
         public String Genre { get; set; }
         public String Description { get; set; }
         public double RunTime { get; set; }
 
+        public virtual List<Cinema> Cinemas { get; set; }
+
     }
 
-    //public class MovieContext : DbContext
-    //{
-    //    public MovieContext() : base("DefaultConnection")
-    //    {
 
-    //    }
-    //    public DbSet<Listing> Listings { get; set; }
-    //}
 }
 
