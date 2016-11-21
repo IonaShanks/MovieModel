@@ -51,7 +51,7 @@
   <ItemGroup>
     <Compile Include="Cinema.cs" />
     <Compile Include="Context.cs" />
-    <Compile Include="Listing.cs" />
+    <Compile Include="MovieListing.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
