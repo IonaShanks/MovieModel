@@ -14,7 +14,7 @@ namespace MovieModel
         public String Website { get; set; }
         public String PhoneNumber { get; set; }
         public String TicketPrice { get; set; }
-        public double RunTime { get; set; }
+        
 
 
         public String FilmID { get; set; }
