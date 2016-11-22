@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace MovieModel
 {
 
-
+    //afthyjtjdttyjdtyjty
     public class MovieContext : DbContext
     {
         public MovieContext() : base("DefaultConnection")
