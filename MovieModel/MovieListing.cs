@@ -2,9 +2,9 @@
 using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
 
-// change!
 
-namespace MovieModel
+
+namespace MovieModel 
 {
     public enum Certification
     {
@@ -23,7 +23,7 @@ namespace MovieModel
     };
     public class MovieListing
     {
-        //Film ID title certification genre description running time
+        
         [Key, Required]
         public String FilmID { get; set; }
         [Required]
@@ -37,6 +37,7 @@ namespace MovieModel
         // Minutes
         public double RunTime { get; set; }
 
+        
         public virtual List<Cinema> Cinemas { get; set; }
 
     }
