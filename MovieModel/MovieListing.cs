@@ -24,7 +24,7 @@ namespace MovieModel
     public class MovieListing
     {
         
-        [Key, Required]
+        [Key, Required, MaxLength(10)]
         public String FilmID { get; set; }
         [Required]
         public String Title { get; set; }

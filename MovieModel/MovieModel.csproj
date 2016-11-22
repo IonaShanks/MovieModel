@@ -50,6 +50,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cinema.cs" />
+    <Compile Include="Migrations\201611222012408_InitialCreate.cs" />
+    <Compile Include="Migrations\201611222012408_InitialCreate.Designer.cs">
+      <DependentUpon>201611222012408_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611222114347_AddUrl.cs" />
+    <Compile Include="Migrations\201611222114347_AddUrl.Designer.cs">
+      <DependentUpon>201611222114347_AddUrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611222115396_AddFilmIDMaxLength.cs" />
+    <Compile Include="Migrations\201611222115396_AddFilmIDMaxLength.Designer.cs">
+      <DependentUpon>201611222115396_AddFilmIDMaxLength.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MovieContext.cs" />
     <Compile Include="MovieListing.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -57,6 +70,17 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201611222012408_InitialCreate.resx">
+      <DependentUpon>201611222012408_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611222114347_AddUrl.resx">
+      <DependentUpon>201611222114347_AddUrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611222115396_AddFilmIDMaxLength.resx">
+      <DependentUpon>201611222115396_AddFilmIDMaxLength.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
