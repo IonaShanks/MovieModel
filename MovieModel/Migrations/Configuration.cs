@@ -10,7 +10,6 @@ namespace MovieModel.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "MovieModel.MovieContext";
         }
 
         protected override void Seed(MovieModel.MovieContext context)

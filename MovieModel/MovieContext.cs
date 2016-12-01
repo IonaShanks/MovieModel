@@ -13,9 +13,9 @@ namespace MovieModel
     {
         public MovieContext() : base("Movie Project")
         {
-
+            Database.SetInitializer<MovieContext>(new CreateDatabaseIfNotExists<MovieContext>());
         }
-        public DbSet<MovieListing> Listings { get; set; }
+        public DbSet<Movie> Movies { get; set; }
         public DbSet<Cinema> Cinemas { get; set; }
     }
 

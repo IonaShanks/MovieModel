@@ -7,13 +7,13 @@ namespace MovieModel.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class AddFilmIDMaxLength : IMigrationMetadata
+    public sealed partial class addedFantasyGenre : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddFilmIDMaxLength));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(addedFantasyGenre));
         
         string IMigrationMetadata.Id
         {
-            get { return "201611222115396_AddFilmIDMaxLength"; }
+            get { return "201611291655110_addedFantasyGenre"; }
         }
         
         string IMigrationMetadata.Source

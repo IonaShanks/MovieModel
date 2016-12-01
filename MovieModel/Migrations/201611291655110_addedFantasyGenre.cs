@@ -3,7 +3,7 @@ namespace MovieModel.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class AddUrl : DbMigration
+    public partial class addedFantasyGenre : DbMigration
     {
         public override void Up()
         {

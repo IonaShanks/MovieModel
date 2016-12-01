@@ -17,8 +17,8 @@ namespace MovieModel
         
 
 
-        public String FilmID { get; set; }
-        public virtual MovieListing Listing { get; set; }
+        public String MovieID { get; set; }
+        public virtual Movie Movies { get; set; }
     }
 
     

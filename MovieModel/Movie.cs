@@ -9,33 +9,48 @@ namespace MovieModel
     public enum Certification
     {
         [Display(Name = "G")]
-        G,
+        IFCOG,
         [Display(Name = "PG")]
-        PG,
-        [Display(Name = "12")]
-        Twelve,
+        IFCOPG,
         [Display(Name = "12A")]
-        TwelveA,
-        [Display(Name = "15")]
-        Fifteen,
+        IFCO12A,
+        [Display(Name = "15A")]
+        IFCO15A,
+        [Display(Name = "16")]
+        IFCO16,
         [Display(Name = "18")]
-        Eighteen
+        IFCO18
     };
-    public class MovieListing
+
+    public enum Genre
+    {
+        Horror,
+        Comedy,
+        Fantasy,
+        Action,        
+        Family,        
+        Romance
+    };
+
+    public class Movie
     {
         
         [Key, Required, MaxLength(10)]
-        public String FilmID { get; set; }
+        public String MovieID { get; set; }
         [Required]
         public String Title { get; set; }
         [Required]
         public Certification Certification { get; set; }
         [Required]
-        public String Genre { get; set; }
+        public Genre Genre { get; set; }
         public String Description { get; set; }
         [Required]
         // Minutes
         public double RunTime { get; set; }
+        public double ShowTime
+        {
+            get { return 20.00; }
+        }
 
         
         public virtual List<Cinema> Cinemas { get; set; }

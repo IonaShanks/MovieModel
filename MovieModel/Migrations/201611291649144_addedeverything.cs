@@ -3,7 +3,7 @@ namespace MovieModel.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate : DbMigration
+    public partial class addedeverything : DbMigration
     {
         public override void Up()
         {
@@ -16,32 +16,32 @@ namespace MovieModel.Migrations
                         Website = c.String(),
                         PhoneNumber = c.String(),
                         TicketPrice = c.String(),
-                        FilmID = c.String(maxLength: 128),
+                        MovieID = c.String(maxLength: 10),
                     })
                 .PrimaryKey(t => t.CinemaID)
-                .ForeignKey("dbo.MovieListings", t => t.FilmID)
-                .Index(t => t.FilmID);
+                .ForeignKey("dbo.Movies", t => t.MovieID)
+                .Index(t => t.MovieID);
             
             CreateTable(
-                "dbo.MovieListings",
+                "dbo.Movies",
                 c => new
                     {
-                        FilmID = c.String(nullable: false, maxLength: 128),
+                        MovieID = c.String(nullable: false, maxLength: 10),
                         Title = c.String(nullable: false),
                         Certification = c.Int(nullable: false),
-                        Genre = c.String(nullable: false),
+                        Genre = c.Int(nullable: false),
                         Description = c.String(),
                         RunTime = c.Double(nullable: false),
                     })
-                .PrimaryKey(t => t.FilmID);
+                .PrimaryKey(t => t.MovieID);
             
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Cinemas", "FilmID", "dbo.MovieListings");
-            DropIndex("dbo.Cinemas", new[] { "FilmID" });
-            DropTable("dbo.MovieListings");
+            DropForeignKey("dbo.Cinemas", "MovieID", "dbo.Movies");
+            DropIndex("dbo.Cinemas", new[] { "MovieID" });
+            DropTable("dbo.Movies");
             DropTable("dbo.Cinemas");
         }
     }

@@ -7,13 +7,13 @@ namespace MovieModel.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class AddUrl : IMigrationMetadata
+    public sealed partial class addedeverything : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddUrl));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(addedeverything));
         
         string IMigrationMetadata.Id
         {
-            get { return "201611222114347_AddUrl"; }
+            get { return "201611291649144_addedeverything"; }
         }
         
         string IMigrationMetadata.Source
